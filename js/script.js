@@ -129,7 +129,15 @@ function initGlobalNetworkCarousel() {
     .join('');
   const dots = Array.from(dotsWrap.querySelectorAll('.carousel-dot'));
 
+  const isMobile = () => window.matchMedia('(max-width: 900px)').matches;
+
   function update() {
+    if (isMobile()) {
+      // Mobile lets the viewport scroll natively instead of paging via transform.
+      track.style.transform = '';
+      return;
+    }
+
     const cardWidth = track.children[0].getBoundingClientRect().width;
     const gap = 24;
     const offset = currentPage * CARDS_PER_VIEW * (cardWidth + gap);
@@ -165,7 +173,27 @@ function initGlobalNetworkCarousel() {
   update();
 }
 
+// ===== Mobile hamburger menu =====
+function initMobileNav() {
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderPills();
   initGlobalNetworkCarousel();
+  initMobileNav();
 });
