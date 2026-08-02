@@ -1,6 +1,10 @@
+// Bump this whenever a mentor photo file is replaced in place (same filename,
+// new content) so browsers don't keep serving a stale cached copy.
+const MENTOR_PHOTO_VERSION = 3;
+
 // ===== Pill Carousel content (edit this array to change the moving chips) =====
 const PILL_TEXT = [
-  'Foreign Bar license with Foreign Law Degree',
+  'Foreign Bar License without Foreign Degree',
   'Law Careers in India',
   'Guidance for Judiciary and other government exams',
   'Become an International Legal professional',
@@ -93,6 +97,21 @@ const MENTORS = [
     ],
     photo: 'assets/images/mentors/10.jpeg',
   },
+  {
+    location: 'Punjab and Haryana',
+    lines: [
+      'High Court',
+      'Criminal Law | White Collar Crime | Government Litigation | Constitutional & Writ Matters | Consumer Law | Public Interest Litigation | Commercial Disputes | RERA | Matrimonial Disputes',
+    ],
+    photo: 'assets/images/mentors/11.jpeg',
+  },
+  {
+    location: 'Internships Mentor',
+    lines: [
+      'NLU alumnus with business law specialisation | Delhi High Court',
+    ],
+    photo: 'assets/images/mentors/12.jpeg',
+  },
 ];
 
 const CARDS_PER_VIEW = 5;
@@ -104,7 +123,7 @@ function renderMentorCard(mentor) {
 
   return `
     <article class="mentor-card">
-      <img src="${mentor.photo}" alt="" class="mentor-photo" />
+      <img src="${mentor.photo}?v=${MENTOR_PHOTO_VERSION}" alt="" class="mentor-photo" />
       <div class="mentor-body">
         <span class="mentor-country">${mentor.location}</span>
         <p class="mentor-bio">${descriptionMarkup}</p>
