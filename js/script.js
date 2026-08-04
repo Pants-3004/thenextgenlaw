@@ -23,10 +23,9 @@ function renderPills() {
 // ===== Global Network mentor data =====
 const MENTORS = [
   {
-    location: 'Italy, Europe',
+    location: 'Dubai',
     lines: [
-      'LL.M (Transnational Crime and Justice)',
-      'International Human Rights Lawyer | Researcher in Statelessness, Citizenship & Forced Migration',
+      'International civil/commercial accredited Mediator | Arbitration Associate | Negotiator| Dispute Resolution Specialist| UGC-NET qualified',
     ],
     photo: 'assets/images/mentors/1.jpeg',
   },
@@ -39,9 +38,10 @@ const MENTORS = [
     photo: 'assets/images/mentors/2.jpeg',
   },
   {
-    location: 'Dubai',
+    location: 'Italy, Europe',
     lines: [
-      'International civil/commercial accredited Mediator | Arbitration Associate | Negotiator| Dispute Resolution Specialist| UGC-NET qualified',
+      'LL.M (Transnational Crime and Justice)',
+      'International Human Rights Lawyer | Researcher in Statelessness, Citizenship & Forced Migration',
     ],
     photo: 'assets/images/mentors/3.jpeg',
   },
