@@ -25,7 +25,7 @@ const MENTORS = [
   {
     location: 'Dubai',
     lines: [
-      'International civil/commercial accredited Mediator | Arbitration Associate | Negotiator| Dispute Resolution Specialist| UGC-NET qualified',
+      'International civil/commercial accredited Mediator | Arbitration Associate | Negotiator | Dispute Resolution Specialist | UGC-NET qualified',
     ],
     photo: 'assets/images/mentors/1.jpeg',
   },
