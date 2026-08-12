@@ -211,8 +211,41 @@ function initMobileNav() {
   });
 }
 
+// ===== Our Services toggle (1:1 Sessions / Webinars) =====
+function initServicesToggle() {
+  const tabs = document.querySelectorAll('.services-tab');
+  const panels = document.querySelectorAll('.services-panel');
+  if (!tabs.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.panel;
+
+      tabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle('active', isActive);
+        t.setAttribute('aria-selected', String(isActive));
+      });
+
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.panel !== target;
+      });
+    });
+  });
+}
+
+// "Coming Soon" service booking buttons don't go anywhere yet — swap in the
+// real Google Form links here once they're available.
+function initServicesBookButtons() {
+  document.querySelectorAll('.services-book-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => e.preventDefault());
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderPills();
   initGlobalNetworkCarousel();
   initMobileNav();
+  initServicesToggle();
+  initServicesBookButtons();
 });

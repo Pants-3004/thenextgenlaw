@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css?v=11" />
+<link rel="stylesheet" href="css/styles.css?v=12" />
 </head>
 <body>
 
@@ -19,6 +19,7 @@
         <img src="assets/images/logo.png" alt="The Next Gen Law" />
       </a>
       <nav class="nav-links">
+        <a href="#services">Our Services</a>
         <a href="#mission">Our Mission</a>
         <a href="#global-network">Global Network</a>
         <a href="#how-it-works">How it works?</a>
@@ -35,6 +36,7 @@
     </div>
   </div>
   <nav class="mobile-menu" id="mobile-menu">
+    <a href="#services">Our Services</a>
     <a href="#mission">Our Mission</a>
     <a href="#global-network">Global Network</a>
     <a href="#how-it-works">How it works?</a>
@@ -82,6 +84,93 @@
       <div class="value-card">
         <img src="assets/images/icon-honest.png" alt="" class="value-icon" />
         <p>Just honest, one-on-one guidance</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Our Services ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Services</h2>
+      </div>
+
+      <div class="services-toggle" role="tablist" aria-label="Service type">
+        <button type="button" class="services-tab active" data-panel="sessions" role="tab" aria-selected="true" id="services-tab-sessions" aria-controls="services-panel-sessions">1:1 Sessions</button>
+        <button type="button" class="services-tab" data-panel="webinars" role="tab" aria-selected="false" id="services-tab-webinars" aria-controls="services-panel-webinars">Webinars</button>
+      </div>
+
+      <!-- 1:1 Sessions panel -->
+      <div class="services-panel" id="services-panel-sessions" data-panel="sessions" role="tabpanel" aria-labelledby="services-tab-sessions">
+        <div class="services-grid">
+          <div class="services-info">
+            <h3>Personalized Career Guidance</h3>
+            <p>Get direct access to experienced legal professionals who can help you navigate your specific career challenges.</p>
+            <ul class="services-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.5" /><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                Tailored roadmap for your goals
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.5" /><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                Direct industry insights
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.5" /><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                Actionable feedback
+              </li>
+            </ul>
+          </div>
+
+          <div class="services-card">
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>What are you looking for?</th>
+                  <th>Price per session</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Career Strategy</td>
+                  <td>$150</td>
+                </tr>
+                <tr>
+                  <td>CV Review</td>
+                  <td>$120</td>
+                </tr>
+                <tr>
+                  <td>Mock Interview</td>
+                  <td>$180</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="services-card-footer">
+              <a href="#" class="btn btn-primary services-book-btn">Coming Soon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Webinars panel -->
+      <div class="services-panel" id="services-panel-webinars" data-panel="webinars" role="tabpanel" aria-labelledby="services-tab-webinars" hidden>
+        <div class="services-grid services-grid--webinar">
+          <div class="services-webinar-image" aria-hidden="true">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-width="1.5" />
+              <ellipse cx="100" cy="100" rx="70" ry="28" stroke="currentColor" stroke-width="1.5" />
+              <ellipse cx="100" cy="100" rx="28" ry="70" stroke="currentColor" stroke-width="1.5" />
+              <line x1="30" y1="100" x2="170" y2="100" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="100" cy="100" r="4" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="services-info">
+            <h3>Expert-Led Legal Webinars</h3>
+            <p>Join our group sessions covering global legal trends, bar exam preparation, and international practice standards. Learn from the best in the field alongside a community of peers.</p>
+            <p class="services-price">Starting from $50</p>
+            <a href="#" class="btn btn-primary services-book-btn">Coming Soon</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -204,6 +293,6 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=11"></script>
+<script src="js/script.js?v=12"></script>
 </body>
 </html>
