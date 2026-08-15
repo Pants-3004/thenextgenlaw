@@ -277,9 +277,18 @@ p { margin: 0; }
   gap: 64px;
   align-items: start;
 }
-.services-grid--webinar { grid-template-columns: 0.75fr 1fr; align-items: start; }
+.services-grid--webinar {
+  grid-template-columns: 0.75fr 1fr;
+  grid-template-areas: "media title" "media rest";
+  row-gap: 0;
+  column-gap: 64px;
+  align-items: start;
+}
+.services-webinar-title { grid-area: title; }
+.services-webinar-media { grid-area: media; }
+.services-grid--webinar .services-info { grid-area: rest; }
 
-.services-info h3 { font-size: 36px; letter-spacing: -0.3px; margin-bottom: 4px; }
+.services-info h3, .services-webinar-title { font-size: 36px; letter-spacing: -0.3px; margin-bottom: 4px; }
 .services-info > p { font-size: 18px; line-height: 1.6; color: var(--color-body); }
 
 .services-quote {
@@ -671,6 +680,19 @@ p { margin: 0; }
   }
   .carousel-viewport::-webkit-scrollbar { display: none; }
   .mentor-card { scroll-snap-align: start; flex: 0 0 calc((100% - 24px) / 2); }
+
+  /* Our Services: stack single-column on mobile, desktop stays side by side. */
+  .services-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* 1:1 Mentorship: table + book button first, details below. */
+  .services-grid--sessions .services-card { order: -1; }
+
+  /* Webinars: title, then image + speaker, then the rest of the details. */
+  .services-grid--webinar {
+    grid-template-areas: "title" "media" "rest";
+    row-gap: 24px;
+  }
+  .services-webinar-media { position: static; top: auto; }
 }
 
 @media (max-width: 640px) {
