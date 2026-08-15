@@ -211,26 +211,36 @@ function initMobileNav() {
   });
 }
 
-// ===== Our Services toggle (1:1 Sessions / Webinars) =====
-function initServicesToggle() {
+// ===== Our Services toggle (1:1 Mentorship / Webinars) =====
+function activateServicesTab(target) {
   const tabs = document.querySelectorAll('.services-tab');
   const panels = document.querySelectorAll('.services-panel');
+
+  tabs.forEach((t) => {
+    const isActive = t.dataset.panel === target;
+    t.classList.toggle('active', isActive);
+    t.setAttribute('aria-selected', String(isActive));
+  });
+
+  panels.forEach((panel) => {
+    panel.hidden = panel.dataset.panel !== target;
+  });
+}
+
+function initServicesToggle() {
+  const tabs = document.querySelectorAll('.services-tab');
   if (!tabs.length) return;
 
   tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.panel;
+    tab.addEventListener('click', () => activateServicesTab(tab.dataset.panel));
+  });
+}
 
-      tabs.forEach((t) => {
-        const isActive = t === tab;
-        t.classList.toggle('active', isActive);
-        t.setAttribute('aria-selected', String(isActive));
-      });
-
-      panels.forEach((panel) => {
-        panel.hidden = panel.dataset.panel !== target;
-      });
-    });
+// Hero "Explore 1:1 Mentorship" / "Explore Webinars" buttons scroll down to
+// the Our Services section and switch it to the matching tab.
+function initHeroServiceLinks() {
+  document.querySelectorAll('.hero-explore-btn').forEach((btn) => {
+    btn.addEventListener('click', () => activateServicesTab(btn.dataset.servicesTab));
   });
 }
 
@@ -247,5 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initGlobalNetworkCarousel();
   initMobileNav();
   initServicesToggle();
+  initHeroServiceLinks();
   initServicesBookButtons();
 });

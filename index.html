@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css?v=12" />
+<link rel="stylesheet" href="css/styles.css?v=20" />
 </head>
 <body>
 
@@ -22,12 +22,10 @@
         <a href="#services">Our Services</a>
         <a href="#mission">Our Mission</a>
         <a href="#global-network">Global Network</a>
-        <a href="#how-it-works">How it works?</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
     <div class="nav-right">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYo4GBpkYygc0l07PKBVPxy1XWXEnePn-O8h20BDxDYpFzrg/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav">Book a free call</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span>
         <span></span>
@@ -39,7 +37,6 @@
     <a href="#services">Our Services</a>
     <a href="#mission">Our Mission</a>
     <a href="#global-network">Global Network</a>
-    <a href="#how-it-works">How it works?</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -56,10 +53,16 @@
           No courses to sell, no agenda to push — just honest guidance to help you choose
           your path and prepare for your career with a solid, informed roadmap.
         </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYo4GBpkYygc0l07PKBVPxy1XWXEnePn-O8h20BDxDYpFzrg/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-          Book a free call to explore possibilities
-          <img src="assets/images/icon-arrow-right.svg" alt="" class="btn-icon" />
-        </a>
+        <div class="hero-cta-group">
+          <a href="#services" class="btn btn-dark btn-lg hero-explore-btn" data-services-tab="sessions">
+            Explore 1:1 Mentorship
+            <img src="assets/images/icon-arrow-right.svg" alt="" class="btn-icon" />
+          </a>
+          <a href="#services" class="btn btn-dark btn-lg hero-explore-btn" data-services-tab="webinars">
+            Explore Webinars
+            <img src="assets/images/icon-arrow-right.svg" alt="" class="btn-icon" />
+          </a>
+        </div>
       </div>
       <div class="hero-art">
         <div class="hero-art-glow"></div>
@@ -96,7 +99,7 @@
       </div>
 
       <div class="services-toggle" role="tablist" aria-label="Service type">
-        <button type="button" class="services-tab active" data-panel="sessions" role="tab" aria-selected="true" id="services-tab-sessions" aria-controls="services-panel-sessions">1:1 Sessions</button>
+        <button type="button" class="services-tab active" data-panel="sessions" role="tab" aria-selected="true" id="services-tab-sessions" aria-controls="services-panel-sessions">1:1 Mentorship</button>
         <button type="button" class="services-tab" data-panel="webinars" role="tab" aria-selected="false" id="services-tab-webinars" aria-controls="services-panel-webinars">Webinars</button>
       </div>
 
@@ -104,22 +107,16 @@
       <div class="services-panel" id="services-panel-sessions" data-panel="sessions" role="tabpanel" aria-labelledby="services-tab-sessions">
         <div class="services-grid">
           <div class="services-info">
-            <h3>Personalized Career Guidance</h3>
-            <p>Get direct access to experienced legal professionals who can help you navigate your specific career challenges.</p>
-            <ul class="services-checklist">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.5" /><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                Tailored roadmap for your goals
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.5" /><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                Direct industry insights
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.5" /><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                Actionable feedback
-              </li>
-            </ul>
+            <h3>Why a 1-on-1 Call?</h3>
+            <p class="services-quote">&ldquo;Because one real conversation can save you a hundred wrong turns.&rdquo;</p>
+            <ol class="services-numbered-list">
+              <li><strong>Personalized to exactly where you are.</strong> No generic advice — every call is shaped around your background, your confusions, and the specific path you're curious about.</li>
+              <li><strong>Honest, not scripted.</strong> You're talking to a real professional who's lived the path you're asking about.</li>
+              <li><strong>A roadmap, not just answers.</strong> You don't just get your questions answered — you leave with a clearer sense of what to do next, and why.</li>
+              <li><strong>Confused about something &ldquo;everyone else seems to already know&rdquo;?</strong> This is the place to ask it, without judgment.</li>
+              <li><strong>No pressure, no pitch.</strong> We're not selling a course or convincing you of anything. This is guidance — plain and simple.</li>
+            </ol>
+            <p class="services-quote services-quote--closing">&ldquo;Your potential shouldn't depend on guesswork — or a chatbot. It deserves a real mentor.&rdquo;</p>
           </div>
 
           <div class="services-card">
@@ -132,21 +129,49 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Career Strategy</td>
-                  <td>$150</td>
+                  <td>Cracking internships in India - focus on big law firms</td>
+                  <td>₹1,400</td>
                 </tr>
                 <tr>
-                  <td>CV Review</td>
-                  <td>$120</td>
+                  <td>Preparing your CV, emails, and reaching out for internships or jobs</td>
+                  <td>₹1,500</td>
                 </tr>
                 <tr>
-                  <td>Mock Interview</td>
-                  <td>$180</td>
+                  <td>Start practice as a first generation lawyer</td>
+                  <td>₹2,000</td>
+                </tr>
+                <tr>
+                  <td>Judiciary preparation strategy - from someone who has qualified it</td>
+                  <td>₹2,000</td>
+                </tr>
+                <tr>
+                  <td>ADR - a career beyond courtrooms</td>
+                  <td>₹2,000</td>
+                </tr>
+                <tr>
+                  <td>Become an International Lawyer with your Indian Degree - it's possible!</td>
+                  <td>₹3,000</td>
+                </tr>
+                <tr>
+                  <td>Lawyer in Canada - exam and life</td>
+                  <td>₹3,000</td>
+                </tr>
+                <tr>
+                  <td>Legal Career in Dubai</td>
+                  <td>₹2,000</td>
+                </tr>
+                <tr>
+                  <td>Careers with UN and International Organizations</td>
+                  <td>₹2,000</td>
+                </tr>
+                <tr>
+                  <td>I am not sure - I want to explore!</td>
+                  <td>₹1,500</td>
                 </tr>
               </tbody>
             </table>
             <div class="services-card-footer">
-              <a href="#" class="btn btn-primary services-book-btn">Coming Soon</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYo4GBpkYygc0l07PKBVPxy1XWXEnePn-O8h20BDxDYpFzrg/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary services-cta-btn">Book your mentorship session</a>
             </div>
           </div>
         </div>
@@ -155,20 +180,54 @@
       <!-- Webinars panel -->
       <div class="services-panel" id="services-panel-webinars" data-panel="webinars" role="tabpanel" aria-labelledby="services-tab-webinars" hidden>
         <div class="services-grid services-grid--webinar">
-          <div class="services-webinar-image" aria-hidden="true">
-            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-width="1.5" />
-              <ellipse cx="100" cy="100" rx="70" ry="28" stroke="currentColor" stroke-width="1.5" />
-              <ellipse cx="100" cy="100" rx="28" ry="70" stroke="currentColor" stroke-width="1.5" />
-              <line x1="30" y1="100" x2="170" y2="100" stroke="currentColor" stroke-width="1.5" />
-              <circle cx="100" cy="100" r="4" fill="currentColor" />
-            </svg>
+          <div class="services-webinar-media">
+            <div class="services-webinar-image">
+              <img src="assets/images/webinar-human-rights.png" alt="Careers in International Human Rights and the UN" />
+            </div>
+
+            <div class="services-speaker">
+              <div class="services-speaker-photo">
+                <img src="assets/images/Seerat.jpeg" alt="Seerat" />
+              </div>
+              <div class="services-speaker-details">
+                <p class="services-speaker-name">Seerat</p>
+                <p class="services-speaker-role">International Human Rights Research Fellow</p>
+                <p class="services-speaker-bio">She is based in Italy. Worked in various international NGOs and Human Rights organisations.</p>
+              </div>
+            </div>
           </div>
+
           <div class="services-info">
-            <h3>Expert-Led Legal Webinars</h3>
-            <p>Join our group sessions covering global legal trends, bar exam preparation, and international practice standards. Learn from the best in the field alongside a community of peers.</p>
-            <p class="services-price">Starting from $50</p>
-            <a href="#" class="btn btn-primary services-book-btn">Coming Soon</a>
+            <h3>Careers in International Human Rights and the UN: Where Do You Start as an Indian Graduate</h3>
+
+            <p class="services-label">In this session, we'll unpack:</p>
+            <ul class="services-bullet-list">
+              <li>UN and Human Rights career landscape — beyond courtrooms and diplomacy</li>
+              <li>The many different professional paths into this field (hint: there's no single "right" degree)</li>
+              <li>Practical steps to help build your own pathway</li>
+              <li>A real, honest journey — including the challenges nobody talks about</li>
+            </ul>
+
+            <div class="services-mini-table-wrap">
+              <table class="services-mini-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>6 September, 2026</td>
+                    <td>6 P.M</td>
+                    <td>Rs. 1,560</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <a href="https://forms.gle/sWdR4rXB2Gws78419" target="_blank" rel="noopener noreferrer" class="btn btn-primary services-cta-btn">Book your seat</a>
           </div>
         </div>
       </div>
@@ -227,41 +286,6 @@
     </div>
   </section>
 
-  <!-- ===== How It Works ===== -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-heading">
-        <h2>How it works?</h2>
-      </div>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-icon"><img src="assets/images/icon-step1.svg" alt="" /></div>
-          <span class="step-number">01</span>
-          <h3>Book a call</h3>
-          <p>Share your contact details and a preferred time to connect. First call is free!</p>
-        </div>
-        <div class="step-card">
-          <div class="step-icon"><img src="assets/images/icon-step2.svg" alt="" /></div>
-          <span class="step-number">02</span>
-          <h3>Get Matched</h3>
-          <p>We pair you with a mentor whose journey matches your aspirations.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-icon"><img src="assets/images/icon-step3.svg" alt="" /></div>
-          <span class="step-number">03</span>
-          <h3>1:1 Conversation</h3>
-          <p>Ask your toughest questions. Get unfiltered, practical advice.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-icon"><img src="assets/images/icon-step4.svg" alt="" /></div>
-          <span class="step-number">04</span>
-          <h3>Roadmap</h3>
-          <p>Walk away with a clear action plan for your unique legal career.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== Final CTA ===== -->
   <section class="final-cta" id="contact">
     <div class="cta-glow cta-glow-tl"></div>
@@ -293,6 +317,6 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=12"></script>
+<script src="js/script.js?v=13"></script>
 </body>
 </html>
